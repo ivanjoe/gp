@@ -127,8 +127,8 @@ div#ecological-farming  .line3 {
 
 div#silver-badge {
 	background: url('../img/progbar-left.png') center no-repeat;
-	/*padding: 70px 0;
-	/*width: 134px;*/
+	/*padding: 70px 0;*/
+	width: 134px;
 	height: 134px;
 }
 
@@ -154,8 +154,8 @@ div#silver-badge .line3 {
 
 div#golden-badge {
 	background: url('../img/progbar-right.png') center no-repeat;
-	/*padding: 70px 0;
-	/*width: 134px;*/
+	/*padding: 70px 0;*/
+	width: 134px;
 	height: 134px;
 
 }
@@ -202,13 +202,32 @@ hr.decor {
 a.bookmark {
 	color: #797672;
 	display: inline-block;
+	position: relative;
+}
+
+.bookmark.camera {
+	left: 120px;
+}
+
+.bookmark.book {
+	left: 100px;
 }
 
 div.bookmark-wrap {
 	background-color: #9f9b98;
 	width: 111px;
 	height: 170px;
-	margin: auto;
+	margin: auto;	
+	-webkit-transition:background 100ms linear, height 100ms;
+	-moz-transition:background 100ms linear, height 100ms;
+	-o-transition:background 100ms linear, height 100ms;
+	-ms-transition:background 100ms linear, height 100ms;
+	transition:background 100ms linear, height 100ms;
+}
+
+div.bookmark-wrap:hover {
+	background-color: #e6bd1a;
+	height: 190px;
 }
 
 div.bookmark-wrap span {
@@ -220,6 +239,15 @@ div.bookmark-wrap span {
 	font-style: italic;
 	font-size: 16px;
 	color: #5c5953;
+/*	-webkit-transition: padding-top 100ms;
+	-moz-transition: padding-top 100ms;
+	-o-transition: padding-top 100ms;
+	-ms-transition: padding-top 100ms;
+	transition: padding-top 100ms;
+}
+
+div.bookmark-wrap span:hover {
+	padding-top: 20px;*/
 }
 
 div.bookmark-wrap:after {
@@ -230,11 +258,15 @@ div.bookmark-wrap:after {
   width:111px;
   bottom:-19px;
   background:transparent url('../img/flag-tail.png') bottom left no-repeat;
-  -webkit-transition:background 50ms linear;
-  -moz-transition:background 50ms linear;
-  -o-transition:background 50ms linear;
-  -ms-transition:background 50ms linear;
-  transition:background 50ms linear;
+  -webkit-transition:background 100ms linear;
+  -moz-transition:background 100ms linear;
+  -o-transition:background 100ms linear;
+  -ms-transition:background 100ms linear;
+  transition:background 100ms linear;
+}
+
+div.bookmark-wrap:hover:after {
+	background: transparent url('../img/flag-tail-y.png') bottom left no-repeat;
 }
 
 div#book {
@@ -258,9 +290,10 @@ div#camera {
 }
 
 #bee-fly {
-	margin-top: 150px;
+	margin-top: 30px;
 	margin-left: 50px;
-	position:relative;
+	position: relative;
+	padding-top: 30px;
 	animation:mymove 5s infinite;
 	-webkit-animation:mymove 5s infinite; /* Safari and Chrome */
 }
