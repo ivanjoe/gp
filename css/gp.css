@@ -2,12 +2,86 @@
 	text-align: justify
 }
 
-nav.tab-bar {
-	background: url('../img/greenpeace_logo_l.png') #e6bd1a center no-repeat;
-	background-position: 10%;	
+div#sign-up {
+	position: fixed;
+	left: -175px;
+	top: 300px;
+	width: 208px;
+	height: 250px;
+	background: url('../img/beefriend.png') transparent 0 0 no-repeat;
+	transition: left 1s;
+	-webkit-transition: left 0.5s;
+	-moz-transition: left 0.5s ;
+	-o-transition: left 0.5s;
+	-ms-transition: left 0.5s;
+	z-index: 999;
 }
 
-#header {	
+div#sign-up:hover {
+	background: url('../img/beefriend.png') transparent 250 0 no-repeat;
+	left: -10px;
+}
+
+div#sign-up span {
+	text-align: center;
+	display: block;
+	position: relative;
+	top: 110px;
+	padding: 30px 0;
+	font-weight: 600;
+	font-size: 16px;
+	color: #5b5552;
+}
+
+div#petitionModal {
+	top: 100px !important;
+	position: fixed;
+	width: 600px;
+	background: #eeecea;
+	padding: 50px 0 20px 0;
+}
+
+
+
+.fields ul li {
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+	float: left;
+	width: 45%;
+	height: 40px;
+	background: transparent;
+	color: #999999;
+	margin-bottom: 40px;
+	margin-right: 5%;
+}
+
+.fields ul li label {
+	left: 12px !important;
+	top: 9px !important;
+	width: 100%;
+}
+
+form .submit {
+	position: absolute;
+	bottom: -95px;
+	height: 150px;
+	left: 0;
+	background: #e6bd1a url('../img/icon_sign.png') 5% center no-repeat;
+	color: #3a332f;
+	font-family: "Poly", "Times New Roman";
+	font-style: italic;
+	font-size: 35px;
+	font-weight: 100;
+	width: 100%;
+}
+
+nav.tab-bar {
+	background: url('../img/greenpeace_logo_l.png') #e6bd1a center no-repeat;
+	background-position: 10%;
+}
+
+#header {
 	background: url('../img/01-header.png') center right no-repeat;
 	background-size: cover;
 	display: block;
@@ -111,7 +185,7 @@ div#ecological-farming  .line3 {
 	text-align: center;
 	float: right;
 	margin-top: -29px;
-	margin-right: -14px;	
+	margin-right: -14px;
 	background: url('../img/progbar-flag.png') top left no-repeat;
 	height: 79px;
 	width: 74px;
@@ -198,7 +272,7 @@ hr.decor {
   padding: 30px 40px; }
   .example-orbit-content li div h1, .example-orbit-content li div h2, .example-orbit-content li div h3 {
     color: #403b33; }
-	
+
 a.bookmark {
 	color: #797672;
 	display: inline-block;
@@ -217,7 +291,7 @@ div.bookmark-wrap {
 	background-color: #9f9b98;
 	width: 111px;
 	height: 170px;
-	margin: auto;	
+	margin: auto;
 	-webkit-transition:background 100ms linear, height 100ms;
 	-moz-transition:background 100ms linear, height 100ms;
 	-o-transition:background 100ms linear, height 100ms;
@@ -334,6 +408,6 @@ div#camera {
 #map-canvas img {
 	max-width: none;
 }
-	
+
 @media only screen and (min-width: 40.063em) {
 }
