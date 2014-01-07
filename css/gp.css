@@ -1,0 +1,295 @@
+.justify {
+	text-align: justify
+}
+
+nav.tab-bar {
+	background: url('../img/greenpeace_logo_l.png') #e6bd1a center no-repeat;
+	background-position: 10%;	
+}
+
+#header {	
+	background: url('../img/01-header.png') center right no-repeat;
+	background-size: cover;
+	display: block;
+	padding-top: 4em;
+}
+
+div.wrapper {
+	padding-top: 350px;
+	padding-bottom: 300px;
+	margin: 0 auto;
+}
+
+div#bubbles {
+	position: absolute;
+	right: 7%;
+	top: 170px;
+	text-align: center;
+}
+
+div#bee-solution {
+	background: url('../img/bee_bubble.png') center right no-repeat;
+	position: absolute;
+	right: 30px;
+	top: 0px;
+	width: 375px;
+	height: 375px;
+	padding: 35px;
+	z-index: 1;
+}
+
+.wrapper #bubbles div#bee-solution span {
+	display: block;
+}
+
+.wrapper #bubbles div#bee-solution  span.line1 {
+	margin-top: 110px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+div#bee-solution  .line2 {
+	font-size: 24px;
+	font-style: italic;
+}
+
+div#ecological-farming {
+	background: url('../img/tractor_bubble.png') center right no-repeat;
+	position: absolute;
+	right: 250px;
+	top: 265px;
+	width: 229px;
+	height: 229px;
+	padding: 16px;
+	z-index: 3;
+}
+
+.wrapper #bubbles div#ecological-farming span {
+	display: block;
+	color: #ffffff;
+}
+
+div#ecological-farming  .line1 {
+	margin-top: 75px;
+	font-size: 20px;
+}
+
+div#ecological-farming  .line2 {
+	font-style: italic;
+	font-size: 24px;
+}
+
+div#ecological-farming  .line3 {
+	font-size: 20px;
+}
+
+#progress-bar {
+	content: ' ';
+	background-color: #7c756d;
+	text-align: center;
+	padding: 60px 0;
+}
+
+#progbar-container {
+	margin-top: 50px;
+}
+
+#progbar-filler {
+	background: url('../img/progbar-filler.png') center;
+	padding: 12px 0;
+}
+
+#progbar-filler-wrap {
+	background: #afaba8;
+	padding: 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#progbar-flag {
+	text-align: center;
+	float: right;
+	margin-top: -29px;
+	margin-right: -14px;	
+	background: url('../img/progbar-flag.png') top left no-repeat;
+	height: 79px;
+	width: 74px;
+}
+
+#progbar-flag {
+	color: #ffffff;
+	font-size: 23px;
+	padding-top: 18px;
+	font-family: "Poly","Times New Roman";
+
+}
+
+div#silver-badge {
+	background: url('../img/progbar-left.png') center no-repeat;
+	/*padding: 70px 0;
+	/*width: 134px;*/
+	height: 134px;
+}
+
+div#silver-badge span {
+	display: block;
+}
+
+div#silver-badge  .line1 {
+	padding-top: 33px;
+	font-size: 20px;
+}
+
+div#silver-badge  .line2 {
+	font-style: italic;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 31px;
+}
+
+div#silver-badge .line3 {
+	font-size: 12px;
+}
+
+div#golden-badge {
+	background: url('../img/progbar-right.png') center no-repeat;
+	/*padding: 70px 0;
+	/*width: 134px;*/
+	height: 134px;
+
+}
+
+div#golden-badge span {
+	display: block;
+	padding: 0 11px;
+}
+
+div#golden-badge  .line1 {
+	padding-top: 25px;
+	font-size: 36px;
+}
+
+div#golden-badge  .line2 {
+	font-size: 21px;
+}
+
+div#golden-badge  .line3 {
+	font-size: 12px;
+}
+
+#the-problem {
+	content: ' ';
+	background-color: #cccac9;
+}
+
+.space {
+	height: 60px;
+}
+
+hr.decor {
+	background: url('../img/decor.png') repeat-x;
+	padding: 5px 0;
+	border: none;
+}
+
+.example-orbit-content li div {
+  color: #403b33;
+  padding: 30px 40px; }
+  .example-orbit-content li div h1, .example-orbit-content li div h2, .example-orbit-content li div h3 {
+    color: #403b33; }
+	
+a.bookmark {
+	color: #797672;
+}
+
+div.bookmark-wrap {
+	background-color: #9f9b98;
+	width: 111px;
+	height: 170px;
+	margin: auto;
+}
+
+div.bookmark-wrap span {
+	display: inline-block;
+	width: 81px;
+	margin: 43px 15px 0px 15px;
+	text-align: center;
+	font-family: serif;
+	font-style: italic;
+	font-size: 16px;
+	color: #5c5953;
+}
+
+div.bookmark-wrap:after {
+  content:' ';
+  display:block;
+  position:absolute;
+  height:19px;
+  width:111px;
+  bottom:-19px;
+  background:transparent url('../img/flag-tail.png') bottom left no-repeat;
+  -webkit-transition:background 50ms linear;
+  -moz-transition:background 50ms linear;
+  -o-transition:background 50ms linear;
+  -ms-transition:background 50ms linear;
+  transition:background 50ms linear;
+}
+
+div#book {
+	background: url('../img/book.png') bottom center no-repeat;
+	position: absolute;
+	bottom: 32px;
+	width: 48px;
+	height: 37px;
+	left: 50%;
+	margin-left: -24px;
+}
+
+div#camera {
+	background: url('../img/camera.png') bottom center no-repeat;
+	position: absolute;
+	bottom: 32px;
+	width: 48px;
+	height: 37px;
+	left: 50%;
+	margin-left: -24px;
+}
+
+#bee-fly {
+	margin-top: 150px;
+	margin-left: 50px;
+	position:relative;
+	animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s infinite; /* Safari and Chrome */
+}
+
+@keyframes mymove
+{
+0%   {top:0px;}
+50%  {top:100px;}
+100% {top:0px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+0%   {top:0px;}
+50%  {top:100px;}
+100% {top:0px;}
+}
+
+#bee-with-bag {
+	background: url('../img/bee-with-bag.png') bottom center no-repeat;
+	display: block;
+	height: 235px;
+	width: 230px;
+}
+
+#map {
+	content: ' ';
+	background-color: #eeeeee;
+	padding-top: 300px;
+	padding-bottom: 300px;
+}
+	
+@media only screen and (min-width: 40.063em) {
