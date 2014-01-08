@@ -24,257 +24,232 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
-    <div class="off-canvas-wrap">
-      <div class="inner-wrap">
-        <div class="fixed">
-          <nav class="tab-bar">
-            <section class="right-small">
-              <!--<a class="right-off-canvas-toggle menu-icon" ><span></span></a> -->
-              <a class="menu-icon" value='play'><span></span></a>
-            </section>
-          </nav>
-        </div>
 
-        <aside id="pull-on-menu">
-          <div class="wrapper">
-            <div class="btn close">Close</div>
-              <ul id="navigation">
-                <li id="teaser">
-                  <a href="#viewlet-teaser">Bee friends</a>
-                </li>
-                <li id="problems">
-                  <a href="#viewlet-problems">The death of Bees</a>
-                </li>
-                <li id="videomap">
-                  <a href="#viewlet-videomap">Pestides effect Bees</a>
-                </li>
-                <li id="effect">
-                  <a href="#viewlet-effect">Chain reaction</a>
-                </li>
-                <li id="solutions">
-                  <a href="#viewlet-solutions">Eco farming</a>
-                </li>
-                <li id="demands">
-                  <a href="#viewlet-demands">Allowance</a>
-                </li>
-              </ul>
-              <div id="locale">
-                <select id="selectlocale">
-                  <option value="http://sos-bees.org" selected="">English</option>
-                  <option value="http://protegeonsabeilles.ch">French(CH)</option>
-                  <option value="http://bienenschutz.ch">German(CH)</option>
-                  <option value="http://bienenschutz.org">German(DE)</option>
-                  <option value="http://bienenschutz.at">German(AT)</option>
-                  <option value="http://savethebees.gr">Greek</option>
-                  <option value="http://mehpusztulas.hu/">Hungarian</option>
-                  <option value="http://salviamoleapi.org">Italian</option>
-                </select>
-              </div>
-              <ul id="links">
-              <li>
-                <a href="http://www.greenpeace.org/switzerland/Global/international/publications/agriculture/2013/BeesInDecline.pdf" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'report']);" target="_blank">Report, Bees in Decline</a>
-              </li>
-              <li>
-                <a href="http://www.greenpeace.org/international/en/about/contactus/" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'contact']);" target="_blank">Contact us</a>
-              </li>
-              <li>
-                <a href="http://www.greenpeace.org/international/en/about/" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'specification']);" target="_blank">Specification</a>
-              </li>
-            </ul>
+    <div class="fixed">
+      <nav class="tab-bar">
+        <section class="right-small">
+          <!--<a class="right-off-canvas-toggle menu-icon" ><span></span></a> -->
+          <a class="menu-icon" value='play'><span></span></a>
+        </section>
+      </nav>
+    </div>
+
+    <aside id="pull-on-menu">
+      <div class="wrapper">
+        <div class="btn close">Close</div>
+          <ul id="navigation">
+            <li id="teaser">
+              <a href="#viewlet-teaser">Bee friends</a>
+            </li>
+            <li id="problems">
+              <a href="#viewlet-problems">The death of Bees</a>
+            </li>
+            <li id="videomap">
+              <a href="#viewlet-videomap">Pestides effect Bees</a>
+            </li>
+            <li id="effect">
+              <a href="#viewlet-effect">Chain reaction</a>
+            </li>
+            <li id="solutions">
+              <a href="#viewlet-solutions">Eco farming</a>
+            </li>
+            <li id="demands">
+              <a href="#viewlet-demands">Allowance</a>
+            </li>
+          </ul>
+          <div id="locale">
+            <select id="selectlocale">
+              <option value="http://sos-bees.org" selected="">English</option>
+              <option value="http://protegeonsabeilles.ch">French(CH)</option>
+              <option value="http://bienenschutz.ch">German(CH)</option>
+              <option value="http://bienenschutz.org">German(DE)</option>
+              <option value="http://bienenschutz.at">German(AT)</option>
+              <option value="http://savethebees.gr">Greek</option>
+              <option value="http://mehpusztulas.hu/">Hungarian</option>
+              <option value="http://salviamoleapi.org">Italian</option>
+            </select>
           </div>
-        </aside>
+          <ul id="links">
+          <li>
+            <a href="http://www.greenpeace.org/switzerland/Global/international/publications/agriculture/2013/BeesInDecline.pdf" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'report']);" target="_blank">Report, Bees in Decline</a>
+          </li>
+          <li>
+            <a href="http://www.greenpeace.org/international/en/about/contactus/" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'contact']);" target="_blank">Contact us</a>
+          </li>
+          <li>
+            <a href="http://www.greenpeace.org/international/en/about/" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'specification']);" target="_blank">Specification</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
-        <a href="#" style="display: inline-block; position:relative" data-reveal-id="petitionModal">
-          <div id="sign-up"><span>Sign the petition</span></div>
-        </a>
+    <a href="#" style="display: inline-block; position:relative" data-reveal-id="petitionModal">
+      <div id="sign-up"><span>Sign the petition</span></div>
+    </a>
 
-        <div id="petitionModal" class="reveal-modal" data-reveal>
-          <form id="petitionForm" method="post" action="" class="clearfix">
-            <div class="fields">
-              <ul>
-                <li class="petition-forename">
-                  <label for="petition-forename" class="infield" data-required="true" style="position: absolute; left: -1px; top: -1px;">First name</label>
-                  <input data-validation="name" type="text" class="" data-required="true" name="forename" id="petition-forename" tabindex="1" value="">
-                </li>
-                <li class="petition-tel">
-                  <label for="petition-tel" class="infield" data-required="false" style="position: absolute; left: -1px; top: -1px;">Mobile</label>
-                  <input data-validation="tel" type="text" class="" data-required="false" name="tel" id="petition-tel" tabindex="4" value="">
-                </li>
-                <li class="petition-name">
-                  <label for="petition-name" class="infield" data-required="true" style="position: absolute; left: -1px; top: -1px;">Name</label>
-                  <input data-validation="name" type="text" class="" data-required="true" name="name" id="petition-name" tabindex="2" value="">
-                </li>
-                <li class="petition-plz">
-                  <label for="petition-plz" class="infield" data-required="false" style="position: absolute; left: -1px; top: -1px;">PLZ</label>
-                  <input data-validation="plz" type="text" class="" data-required="false" name="plz" id="petition-plz" tabindex="5" value="">
-                </li>
-                <li class="petition-mail">
-                  <label for="petition-mail" class="infield" data-required="true" style="position: absolute; left: -1px; top: -1px;">E-Mail</label>
-                  <input data-validation="email" type="email" class="" data-required="true" name="mail" id="petition-mail" tabindex="3" value="">
-                </li>
-                <li class="petition-country">
-                  <label for="petition-country" class="pointer " data-required="false">country</label>
-                  <select name="country" id="petition-country" tabindex="6">
-                    <option value="false" selected="" disabled="">Please select a country</option>
-                    <option value="FI">Finland</option>
-                  </select>
-                </li>
-                <li class="petition-newsletter">
-                  <label for="petition-newsletter" class="pointer " data-required="false">Sign up for Newsletter</label>
-                  <input type="checkbox" class="checkbox " data-required="false" name="newsletter" id="petition-newsletter" tabindex="7" value="">
-                </li>
-              </ul>
-            </div>
-            <input class="submit" type="submit" name="beefriend-submit" value="Sign now">
-          </form>
-          <a class="close-reveal-modal">&#215;</a>
+    <div id="petitionModal" class="reveal-modal" data-reveal>
+      <form id="petitionForm" method="post" action="" class="clearfix">
+        <div class="fields">
+          <ul>
+            <li class="petition-forename">
+              <label for="petition-forename" class="infield" data-required="true" style="position: absolute; left: -1px; top: -1px;">First name</label>
+              <input data-validation="name" type="text" class="" data-required="true" name="forename" id="petition-forename" tabindex="1" value="">
+            </li>
+            <li class="petition-tel">
+              <label for="petition-tel" class="infield" data-required="false" style="position: absolute; left: -1px; top: -1px;">Mobile</label>
+              <input data-validation="tel" type="text" class="" data-required="false" name="tel" id="petition-tel" tabindex="4" value="">
+            </li>
+            <li class="petition-name">
+              <label for="petition-name" class="infield" data-required="true" style="position: absolute; left: -1px; top: -1px;">Name</label>
+              <input data-validation="name" type="text" class="" data-required="true" name="name" id="petition-name" tabindex="2" value="">
+            </li>
+            <li class="petition-plz">
+              <label for="petition-plz" class="infield" data-required="false" style="position: absolute; left: -1px; top: -1px;">PLZ</label>
+              <input data-validation="plz" type="text" class="" data-required="false" name="plz" id="petition-plz" tabindex="5" value="">
+            </li>
+            <li class="petition-mail">
+              <label for="petition-mail" class="infield" data-required="true" style="position: absolute; left: -1px; top: -1px;">E-Mail</label>
+              <input data-validation="email" type="email" class="" data-required="true" name="mail" id="petition-mail" tabindex="3" value="">
+            </li>
+            <li class="petition-country">
+              <label for="petition-country" class="pointer " data-required="false">country</label>
+              <select name="country" id="petition-country" tabindex="6">
+                <option value="false" selected="" disabled="">Please select a country</option>
+                <option value="FI">Finland</option>
+              </select>
+            </li>
+            <li class="petition-newsletter">
+              <label for="petition-newsletter" class="pointer " data-required="false">Sign up for Newsletter</label>
+              <input type="checkbox" class="checkbox " data-required="false" name="newsletter" id="petition-newsletter" tabindex="7" value="">
+            </li>
+          </ul>
         </div>
+        <input class="submit" type="submit" name="beefriend-submit" value="Sign now">
+      </form>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
 
-
-        <aside class="right-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label>Close X</label></li>
-            <li><a href="#">BEE FRIENDS</a></li>
-            <li><a href="#">THE DEATH OF BEES</a></li>
-            <li><a href="#">PESTICIDES AFFECT BEES</a></li>
-            <li><a href="#">CHAIN REACTION</a></li>
-            <li><a href="#">ECO FARMING ALLOWANCE</a></li>
-          </ul>
-          <br />
-          <br />
-          <ul class="off-canvas-list">
-            <li>Report bees in Decline</li>
-            <li>Contact us</a></li>
-            <li>Specification</a></li>
-          </ul>
-        </aside>
-
-        <section class="main-section">
-          <div id="header">
-            <div class="wrapper">
-              <div id="bubbles">
-                <div id="bee-solution">
-                  <span class="line1">BEE THE SOLUTION</span><br/>
-                  <span class="line2">JOIN US TO PROTECT THE BEES</span>
-                </div>
-                <div id="ecological-farming">
-                  <span class="line1">SUPPORT</span>
-                  <span class="line2">ECOLOGICAL</span>
-                  <span class="line3">FARMING</span>
-                </div>
-              </div>
+    <section class="main-section">
+      <div id="header">
+        <div class="wrapper">
+          <div id="bubbles">
+            <div id="bee-solution">
+              <span class="line1">BEE THE SOLUTION</span><br/>
+              <span class="line2">JOIN US TO PROTECT THE BEES</span>
+            </div>
+            <div id="ecological-farming">
+              <span class="line1">SUPPORT</span>
+              <span class="line2">ECOLOGICAL</span>
+              <span class="line3">FARMING</span>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div id="progress-bar">
-            <div class="row">
-              <div class="large-2 columns">
-                <div id="silver-badge">
-                  <span class="line1">HELP US</span>
-                  <span class="line2">SAVE</span>
-                  <span class="line3">THE BEES AND THE AGRICULTURE</span>
-                </div>
-              </div>
-              <div class="large-8 columns">
-                <div id="progbar-container">
+      <div id="progress-bar">
+        <div class="row">
+          <div class="large-2 columns">
+            <div id="silver-badge">
+              <span class="line1">HELP US</span>
+              <span class="line2">SAVE</span>
+              <span class="line3">THE BEES AND THE AGRICULTURE</span>
+            </div>
+          </div>
+          <div class="large-8 columns">
+            <div id="progbar-container">
 
-                  <div id="progbar-filler-wrap">
-                    <div id="progbar-filler" style="width:45%">
-                      <div id="progbar-flag">
-                        <span>45%</span>
-                      </div>
-                    </div>
+              <div id="progbar-filler-wrap">
+                <div id="progbar-filler" style="width:45%">
+                  <div id="progbar-flag">
+                    <span>45%</span>
                   </div>
                 </div>
               </div>
-              <div class="large-2 columns">
-                <div id="golden-badge">
-                  <span class="line1">1</span>
-                  <span class="line2">MILLION</span>
-                  <span class="line3">ACTIONS FOR BEES</span>
-                </div>
-              </div>
             </div>
           </div>
-
-          <div id="the-problem">
-            <div class="row">
-              <div class="large-5 medium-5 columns" style="float: right; height: 190px;">
-                <div class="row">
-                  <a href="#" class="bookmark book">
-                    <div class="bookmark-wrap">
-                      <span>Report: Bees in decline</span>
-                      <div id="book"></div>
-                    </div>
-                  </a>
-                  <a href="#" class="bookmark camera">
-                    <div class="bookmark-wrap">
-                      <span>More than Honey</span>
-                      <div id="camera"></div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="large-7 medium-7 columns">
-                <div class="space"></div>
-                <hr class="decor" />
-                <h1>The problem of bee decline</h1>
-                <hr class="decor" />
-                <p class="justify">Since the late 1990s, beekeepers around the world have observed the mysterious and sudden disappearance of bees, and report unusually high rates of decline in honeybee colonies. Bees make more than honey - they are key to food production because they pollinate crops. Bumblebees, other wild bees, and insects like butterflies, wasps, and flies all provide valuable pollination services. A third of the food that we eat depends on pollinating insects: vegetables like zucchini, fruits like apricot, nuts like almonds, spices like coriander, edible oils like canola, and many more… In Europe alone, the growth of over 4,000 vegetables depends on the essential work of pollinators. But currently, more and more bees are dying. The bee decline affects mankind too. Our lives depend on theirs.</p>
-                <div class="space"></div>
-                <h3>Most recent news</h3>
-                <div class="carousel">
-                  <ul class="example-orbit-content" data-orbit>
-                    <li data-orbit-slide="headline-1">
-                      <div>
-                        <h2>Headline 1</h2>
-                        <h3>Subheadline</h3>
-                        <hr />
-                      </div>
-                    </li>
-                    <li data-orbit-slide="headline-2">
-                      <div>
-                        <h2>Headline 2</h2>
-                        <h3>Subheadline</h3>
-                        <hr />
-                      </div>
-                    </li>
-                    <li data-orbit-slide="headline-3">
-                      <div>
-                        <h2>Headline 3</h2>
-                        <h3>Subheadline</h3>
-                        <hr />
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="large-5 medium-5 columns" style="float:right">
-                <div id="bee-fly">
-                  <div id="bee-with-bag"></div>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-
-          <div id="map">
-            <div data-interchange="[maps/default.html, (small)], [maps/medium.html, (medium)], [maps/large.html, (large)]">
-              <div data-alert class="alert-box secondary radius">
-                This is the default content.
-                <a href="#" class="close">&times;</a>
-              </div>
+          <div class="large-2 columns">
+            <div id="golden-badge">
+              <span class="line1">1</span>
+              <span class="line2">MILLION</span>
+              <span class="line3">ACTIONS FOR BEES</span>
             </div>
           </div>
-        </section>
-
-        <a class="exit-off-canvas"></a>
+        </div>
       </div>
 
-    </div>
+      <div id="the-problem">
+        <div class="row">
+          <div class="large-5 medium-5 columns" style="float: right; height: 190px;">
+            <div class="row">
+              <a href="#" class="bookmark book">
+                <div class="bookmark-wrap">
+                  <span>Report: Bees in decline</span>
+                  <div id="book"></div>
+                </div>
+              </a>
+              <a href="#" class="bookmark camera">
+                <div class="bookmark-wrap">
+                  <span>More than Honey</span>
+                  <div id="camera"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="large-7 medium-7 columns">
+            <div class="space"></div>
+            <hr class="decor" />
+            <h1>The problem of bee decline</h1>
+            <hr class="decor" />
+            <p class="justify">Since the late 1990s, beekeepers around the world have observed the mysterious and sudden disappearance of bees, and report unusually high rates of decline in honeybee colonies. Bees make more than honey - they are key to food production because they pollinate crops. Bumblebees, other wild bees, and insects like butterflies, wasps, and flies all provide valuable pollination services. A third of the food that we eat depends on pollinating insects: vegetables like zucchini, fruits like apricot, nuts like almonds, spices like coriander, edible oils like canola, and many more… In Europe alone, the growth of over 4,000 vegetables depends on the essential work of pollinators. But currently, more and more bees are dying. The bee decline affects mankind too. Our lives depend on theirs.</p>
+            <div class="space"></div>
+            <h3>Most recent news</h3>
+            <div class="carousel">
+              <ul class="example-orbit-content" data-orbit>
+                <li data-orbit-slide="headline-1">
+                  <div>
+                    <h2>Headline 1</h2>
+                    <h3>Subheadline</h3>
+                    <hr />
+                  </div>
+                </li>
+                <li data-orbit-slide="headline-2">
+                  <div>
+                    <h2>Headline 2</h2>
+                    <h3>Subheadline</h3>
+                    <hr />
+                  </div>
+                </li>
+                <li data-orbit-slide="headline-3">
+                  <div>
+                    <h2>Headline 3</h2>
+                    <h3>Subheadline</h3>
+                    <hr />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="large-5 medium-5 columns" style="float:right">
+            <div id="bee-fly">
+              <div id="bee-with-bag"></div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="map">
+        <div data-interchange="[maps/default.html, (small)], [maps/medium.html, (medium)], [maps/large.html, (large)]">
+          <div data-alert class="alert-box secondary radius">
+            This is the default content.
+            <a href="#" class="close">&times;</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="js/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
