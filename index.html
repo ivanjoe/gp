@@ -29,10 +29,60 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div class="fixed">
           <nav class="tab-bar">
             <section class="right-small">
-              <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+              <!--<a class="right-off-canvas-toggle menu-icon" ><span></span></a> -->
+              <a class="menu-icon" value='play'><span></span></a>
             </section>
           </nav>
         </div>
+
+        <aside id="pull-on-menu">
+          <div class="wrapper">
+            <div class="btn close">Close</div>
+              <ul id="navigation">
+                <li id="teaser">
+                  <a href="#viewlet-teaser">Bee friends</a>
+                </li>
+                <li id="problems">
+                  <a href="#viewlet-problems">The death of Bees</a>
+                </li>
+                <li id="videomap">
+                  <a href="#viewlet-videomap">Pestides effect Bees</a>
+                </li>
+                <li id="effect">
+                  <a href="#viewlet-effect">Chain reaction</a>
+                </li>
+                <li id="solutions">
+                  <a href="#viewlet-solutions">Eco farming</a>
+                </li>
+                <li id="demands">
+                  <a href="#viewlet-demands">Allowance</a>
+                </li>
+              </ul>
+              <div id="locale">
+                <select id="selectlocale">
+                  <option value="http://sos-bees.org" selected="">English</option>
+                  <option value="http://protegeonsabeilles.ch">French(CH)</option>
+                  <option value="http://bienenschutz.ch">German(CH)</option>
+                  <option value="http://bienenschutz.org">German(DE)</option>
+                  <option value="http://bienenschutz.at">German(AT)</option>
+                  <option value="http://savethebees.gr">Greek</option>
+                  <option value="http://mehpusztulas.hu/">Hungarian</option>
+                  <option value="http://salviamoleapi.org">Italian</option>
+                </select>
+              </div>
+              <ul id="links">
+              <li>
+                <a href="http://www.greenpeace.org/switzerland/Global/international/publications/agriculture/2013/BeesInDecline.pdf" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'report']);" target="_blank">Report, Bees in Decline</a>
+              </li>
+              <li>
+                <a href="http://www.greenpeace.org/international/en/about/contactus/" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'contact']);" target="_blank">Contact us</a>
+              </li>
+              <li>
+                <a href="http://www.greenpeace.org/international/en/about/" onclick="_gaq.push(['_trackEvent', 'menu_link_extern', 'specification']);" target="_blank">Specification</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
 
         <a href="#" style="display: inline-block; position:relative" data-reveal-id="petitionModal">
           <div id="sign-up"><span>Sign the petition</span></div>
@@ -231,6 +281,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <script src="js/foundation/foundation.interchange.js"></script>
     <script>
       $(document).foundation();
+    </script>
+    <script type="text/javascript">
+var $menu = $('#pull-on-menu');
+$('.menu-icon:eq(0)').on('click', function() {
+    $menu.addClass('pullIn');
+});
+$('.close:eq(0)').on('click', function() {
+    $menu.removeClass('pullIn');
+});
     </script>
   </body>
 </html>
